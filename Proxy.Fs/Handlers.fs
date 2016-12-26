@@ -13,8 +13,11 @@ type FirstRequestHandler() =
 
     interface IHandler with
         member this.Run context =
-            let task = HttpHeaderStream.Instance().GetHeader context.ClientStream
-            let async = Async.AwaitTask task
+            let async = async {
+                let! result = Async.AwaitTask (HttpHeaderStream.Instance().GetHeader context.ClientStream)
+                return result
+            }
+
             context.Header <- Async.RunSynchronously async
 
             match context.Header with
