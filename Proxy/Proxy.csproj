@@ -52,7 +52,7 @@
     <Compile Include="Handlers\FirstRequestHandler.cs" />
     <Compile Include="Handlers\HttpProxyHandler.cs" />
     <Compile Include="Handlers\NewHostHandler.cs" />
-    <Compile Include="Handlers\ProxyTypeHandler.cs" />
+    <Compile Include="Handlers\ProxyTypeHandlerC.cs" />
     <Compile Include="Sessions\Session.cs" />
     <Compile Include="Handlers\HttpsTunnelHandler.cs" />
     <Compile Include="Configurations\Configuration.cs" />
