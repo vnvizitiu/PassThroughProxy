@@ -5,6 +5,7 @@ open Proxy.Core.Handlers
 open Proxy.Core.Headers
 open Proxy.Core.Sessions
 open System.Linq;
+open System.Net.Sockets
 open System.Threading.Tasks;
 
 type FirstRequestHandler() =
@@ -63,3 +64,24 @@ type FirewallHandler() =
     member private this.IsAllowed(context:SessionContext) =
         let a = Configuration.Settings.Firewall.Rules.Any(fun r -> r.Pattern.Match(context.Header.Host.Hostname).Success && r.Action = ActionEnum.Deny)
         not a
+
+
+type NewHostHandler() =
+    static let instance = new NewHostHandler()
+
+    static member Instance() =
+        instance
+
+    interface IHandler with
+        member this.Run context =
+            context.RemoveHost()
+
+            let host = async {
+                let client = new TcpClient()
+                do! Async.AwaitTask (client.ConnectAsync (context.Header.Host.Hostname, context.Header.Host.Port))
+                return client
+            }
+            
+            context.AddHost (Async.RunSynchronously host)
+            context.CurrentHostAddress <- context.Header.Host
+            ExitReason.NewHostConnected |> Task.FromResult

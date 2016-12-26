@@ -7,6 +7,7 @@ using Proxy.Cs.Handlers;
 using ProxyTypeHandler = Proxy.Fs.Handlers.ProxyTypeHandler;
 using FirstRequestHandler = Proxy.Fs.Handlers.FirstRequestHandler;
 using FirewallHandler = Proxy.Fs.Handlers.FirewallHandler;
+using NewHostHandler = Proxy.Fs.Handlers.NewHostHandler;
 
 namespace Proxy.Sessions
 {
