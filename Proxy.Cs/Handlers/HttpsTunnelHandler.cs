@@ -3,9 +3,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Proxy.Core.Handlers;
 using Proxy.Core.Sessions;
-using Proxy.Tunnels;
+using Proxy.Cs.Tunnels;
 
-namespace Proxy.Handlers
+namespace Proxy.Cs.Handlers
 {
     public class HttpsTunnelHandler : IHandler
     {

@@ -3,8 +3,8 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 using Proxy.Core.Handlers;
 using Proxy.Core.Sessions;
+using Proxy.Cs.Handlers;
 using Proxy.Fs.Handlers;
-using Proxy.Handlers;
 
 namespace Proxy.Sessions
 {

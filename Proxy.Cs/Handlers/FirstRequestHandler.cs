@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Proxy.Core.Handlers;
 using Proxy.Core.Sessions;
-using Proxy.Headers;
+using Proxy.Cs.Headers;
 
-namespace Proxy.Handlers
+namespace Proxy.Cs.Handlers
 {
     public class FirstRequestHandler : IHandler
     {

@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace Proxy.Configurations
+namespace Proxy.Core.Configurations
 {
     public class Rule
     {

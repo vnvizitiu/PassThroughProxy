@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Text;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using Proxy.Configurations;
+using Proxy.Core.Configurations;
 using StubServer.Http;
 
 namespace Proxy.Tests

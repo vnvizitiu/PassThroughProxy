@@ -58,6 +58,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Proxy.Core\Proxy.Core.csproj">
+      <Project>{8c7f69f1-3fa3-4e39-9c88-4a530981424f}</Project>
+      <Name>Proxy.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Proxy\Proxy.csproj">
       <Project>{d0fcfdc9-21cd-4c70-bc77-53b327ed7f20}</Project>
       <Name>Proxy</Name>

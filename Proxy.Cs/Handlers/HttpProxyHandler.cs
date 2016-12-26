@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 using Proxy.Core.Handlers;
 using Proxy.Core.Headers;
 using Proxy.Core.Sessions;
-using Proxy.Headers;
-using Proxy.Tunnels;
+using Proxy.Cs.Headers;
+using Proxy.Cs.Tunnels;
 
-namespace Proxy.Handlers
+namespace Proxy.Cs.Handlers
 {
     public class HttpProxyHandler : IHandler
     {

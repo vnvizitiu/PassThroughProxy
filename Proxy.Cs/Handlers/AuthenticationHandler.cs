@@ -3,12 +3,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Proxy.Configurations;
+using Proxy.Core.Configurations;
 using Proxy.Core.Handlers;
 using Proxy.Core.Headers;
 using Proxy.Core.Sessions;
 
-namespace Proxy.Handlers
+namespace Proxy.Cs.Handlers
 {
     public class AuthenticationHandler : IHandler
     {

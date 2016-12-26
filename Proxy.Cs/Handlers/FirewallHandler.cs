@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using Proxy.Configurations;
+using Proxy.Core.Configurations;
 using Proxy.Core.Handlers;
 using Proxy.Core.Sessions;
 
-namespace Proxy.Handlers
+namespace Proxy.Cs.Handlers
 {
     public class FirewallHandler : IHandler
     {

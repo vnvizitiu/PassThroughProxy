@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Proxy.Configurations;
+using Proxy.Core.Configurations;
 
 namespace Proxy
 {

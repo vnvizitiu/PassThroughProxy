@@ -1,4 +1,4 @@
-namespace Proxy.Configurations
+namespace Proxy.Core.Configurations
 {
     public class Firewall
     {

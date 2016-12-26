@@ -4,7 +4,7 @@ using Proxy.Core.Handlers;
 using Proxy.Core.Headers;
 using Proxy.Core.Sessions;
 
-namespace Proxy.Handlers
+namespace Proxy.Cs.Handlers
 {
     public class NewHostHandler : IHandler
     {

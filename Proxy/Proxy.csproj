@@ -42,22 +42,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configurations\Authentication.cs" />
-    <Compile Include="Configurations\Firewall.cs" />
-    <Compile Include="Configurations\Rule.cs" />
-    <Compile Include="Configurations\Server.cs" />
-    <Compile Include="Handlers\FirewallHandler.cs" />
-    <Compile Include="Headers\HttpHeaderStream.cs" />
-    <Compile Include="Handlers\AuthenticationHandler.cs" />
-    <Compile Include="Handlers\FirstRequestHandler.cs" />
-    <Compile Include="Handlers\HttpProxyHandler.cs" />
-    <Compile Include="Handlers\NewHostHandler.cs" />
-    <Compile Include="Handlers\ProxyTypeHandlerC.cs" />
     <Compile Include="Sessions\Session.cs" />
-    <Compile Include="Handlers\HttpsTunnelHandler.cs" />
-    <Compile Include="Configurations\Configuration.cs" />
-    <Compile Include="Tunnels\TcpOneWayTunnel.cs" />
-    <Compile Include="Tunnels\TcpTwoWayTunnel.cs" />
     <Compile Include="PassThroughProxy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

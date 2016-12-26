@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Newtonsoft.Json;
 
-namespace Proxy.Configurations
+namespace Proxy.Core.Configurations
 {
     public class Configuration
     {

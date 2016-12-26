@@ -4,14 +4,14 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Proxy.Tunnels
+namespace Proxy.Cs.Tunnels
 {
-    public class TcpOneWayTunnel : IDisposable
+    public class TcpTwoWayTunnel : IDisposable
     {
         private const int BufferSize = 8192;
         private CancellationTokenSource _cancellationTokenSource;
 
-        public TcpOneWayTunnel()
+        public TcpTwoWayTunnel()
         {
             _cancellationTokenSource = new CancellationTokenSource();
         }
@@ -22,10 +22,11 @@ namespace Proxy.Tunnels
             GC.SuppressFinalize(this);
         }
 
-        public async Task Run(NetworkStream destination, NetworkStream source)
+        public async Task Run(NetworkStream client, NetworkStream host)
         {
             await Task.WhenAny(
-                Tunnel(source, destination, _cancellationTokenSource.Token));
+                Tunnel(client, host, _cancellationTokenSource.Token),
+                Tunnel(host, client, _cancellationTokenSource.Token));
         }
 
         protected virtual void Dispose(bool disposing)
