@@ -46,6 +46,7 @@
     <Compile Include="Handlers\ExitReason.cs" />
     <Compile Include="Handlers\IHandler.cs" />
     <Compile Include="Headers\HttpHeader.cs" />
+    <Compile Include="Headers\HttpHeaderStream.cs" />
     <Compile Include="Network\Address.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sessions\SessionContext.cs" />
