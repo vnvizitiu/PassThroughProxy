@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 using Proxy.Configurations;
 using StubServer.Http;
+using Proxy = Proxy.Configurations.Proxy;
 
 namespace Proxy.Tests
 {
@@ -39,7 +40,8 @@ namespace Proxy.Tests
             Configuration.Settings = new Configuration(
                 new Server(ProxyPort),
                 new Authentication(false, null, null),
-                new Firewall(false, new Rule[] {}));
+                new Firewall(false, new Rule[] {}),
+                null);
         }
 
         private static readonly string MachineName = Environment.MachineName;

@@ -19,5 +19,15 @@
         "action": "deny"
       }
     ]
+  },
+  "proxy": {
+    "enabled": true,
+    "address": "address",
+    "port": 7128,
+    "authentication": {
+      "enabled": false,
+      "username": "username",
+      "password": "password"
+    }
   }
 }

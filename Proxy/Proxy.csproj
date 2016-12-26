@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Configurations\Authentication.cs" />
     <Compile Include="Configurations\Firewall.cs" />
+    <Compile Include="Configurations\Proxy.cs" />
     <Compile Include="Configurations\Rule.cs" />
     <Compile Include="Configurations\Server.cs" />
     <Compile Include="Handlers\FirewallHandler.cs" />
