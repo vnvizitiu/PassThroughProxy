@@ -1,7 +1,8 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using Proxy.Configurations;
-using Proxy.Sessions;
+using Proxy.Core.Handlers;
+using Proxy.Core.Sessions;
 
 namespace Proxy.Handlers
 {

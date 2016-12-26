@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
+using Proxy.Core.Handlers;
+using Proxy.Core.Sessions;
 using Proxy.Headers;
-using Proxy.Sessions;
 
 namespace Proxy.Handlers
 {

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Proxy.Network;
+using Proxy.Core.Network;
 
-namespace Proxy.Headers
+namespace Proxy.Core.Headers
 {
     public class HttpHeader
     {

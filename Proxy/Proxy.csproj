@@ -47,15 +47,10 @@
     <Compile Include="Configurations\Rule.cs" />
     <Compile Include="Configurations\Server.cs" />
     <Compile Include="Handlers\FirewallHandler.cs" />
-    <Compile Include="Network\Address.cs" />
-    <Compile Include="Headers\HttpHeader.cs" />
     <Compile Include="Headers\HttpHeaderStream.cs" />
     <Compile Include="Handlers\AuthenticationHandler.cs" />
-    <Compile Include="Sessions\SessionContext.cs" />
     <Compile Include="Handlers\FirstRequestHandler.cs" />
-    <Compile Include="Handlers\ExitReason.cs" />
     <Compile Include="Handlers\HttpProxyHandler.cs" />
-    <Compile Include="Handlers\IHandler.cs" />
     <Compile Include="Handlers\NewHostHandler.cs" />
     <Compile Include="Handlers\ProxyTypeHandler.cs" />
     <Compile Include="Sessions\Session.cs" />
@@ -78,6 +73,21 @@
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Proxy.Core\Proxy.Core.csproj">
+      <Project>{8c7f69f1-3fa3-4e39-9c88-4a530981424f}</Project>
+      <Name>Proxy.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proxy.Cs\Proxy.Cs.csproj">
+      <Project>{6747b5c2-0c1a-4c3c-867f-994db3348ec1}</Project>
+      <Name>Proxy.Cs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proxy.Fs\Proxy.Fs.fsproj">
+      <Project>{26600861-81c3-498a-b798-f7783cf8b349}</Project>
+      <Name>Proxy.Fs</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.1.29.4\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.4\build\dotnet\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

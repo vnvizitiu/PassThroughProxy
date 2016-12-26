@@ -1,4 +1,4 @@
-﻿namespace Proxy.Handlers
+﻿namespace Proxy.Core.Handlers
 {
     public enum ExitReason
     {

@@ -1,8 +1,10 @@
 ﻿using System.IO;
 using System.Net.Sockets;
 using System.Threading.Tasks;
+using Proxy.Core.Handlers;
+using Proxy.Core.Headers;
+using Proxy.Core.Sessions;
 using Proxy.Headers;
-using Proxy.Sessions;
 using Proxy.Tunnels;
 
 namespace Proxy.Handlers

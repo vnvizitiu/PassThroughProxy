@@ -1,7 +1,8 @@
 ﻿using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using Proxy.Sessions;
+using Proxy.Core.Handlers;
+using Proxy.Core.Sessions;
 using Proxy.Tunnels;
 
 namespace Proxy.Handlers

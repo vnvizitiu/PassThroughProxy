@@ -1,4 +1,4 @@
-﻿namespace Proxy.Network
+﻿namespace Proxy.Core.Network
 {
     public class Address
     {

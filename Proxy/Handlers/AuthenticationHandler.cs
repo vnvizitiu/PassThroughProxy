@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Proxy.Configurations;
-using Proxy.Headers;
-using Proxy.Sessions;
+using Proxy.Core.Handlers;
+using Proxy.Core.Headers;
+using Proxy.Core.Sessions;
 
 namespace Proxy.Handlers
 {

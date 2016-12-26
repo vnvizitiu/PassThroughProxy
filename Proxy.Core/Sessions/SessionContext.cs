@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net.Sockets;
-using Proxy.Headers;
-using Proxy.Network;
+using Proxy.Core.Headers;
+using Proxy.Core.Network;
 
-namespace Proxy.Sessions
+namespace Proxy.Core.Sessions
 {
     public class SessionContext : IDisposable
     {

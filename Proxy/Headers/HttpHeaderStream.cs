@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using Proxy.Core.Headers;
 
 namespace Proxy.Headers
 {
