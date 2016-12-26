@@ -5,6 +5,7 @@ using Proxy.Core.Handlers;
 using Proxy.Core.Sessions;
 using Proxy.Cs.Handlers;
 using Proxy.Fs.Handlers;
+using ProxyTypeHandler = Proxy.Fs.Handlers.ProxyTypeHandler;
 
 namespace Proxy.Sessions
 {

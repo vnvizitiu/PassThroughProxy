@@ -4,11 +4,11 @@ using Proxy.Core.Sessions;
 
 namespace Proxy.Cs.Handlers
 {
-    public class ProxyTypeHandlerC : IHandler
+    public class ProxyTypeHandler : IHandler
     {
-        private static readonly ProxyTypeHandlerC Self = new ProxyTypeHandlerC();
+        private static readonly ProxyTypeHandler Self = new ProxyTypeHandler();
 
-        private ProxyTypeHandlerC()
+        private ProxyTypeHandler()
         {
         }
 
@@ -17,7 +17,7 @@ namespace Proxy.Cs.Handlers
             return Task.FromResult(context.Header.Verb == "CONNECT" ? ExitReason.HttpsTunnelRequired : ExitReason.HttpProxyRequired);
         }
 
-        public static ProxyTypeHandlerC Instance()
+        public static ProxyTypeHandler Instance()
         {
             return Self;
         }
