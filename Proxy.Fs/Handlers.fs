@@ -1,9 +1,11 @@
 ﻿namespace Proxy.Fs.Handlers
 
-open System.Threading.Tasks;
+open Proxy.Core.Configurations;
 open Proxy.Core.Handlers
-open Proxy.Core.Sessions
 open Proxy.Core.Headers
+open Proxy.Core.Sessions
+open System.Linq;
+open System.Threading.Tasks;
 
 type FirstRequestHandler() =
     static let instance = new FirstRequestHandler()
@@ -38,3 +40,26 @@ type ProxyTypeHandler() =
             | "CONNECT" -> ExitReason.HttpsTunnelRequired
             | _ ->  ExitReason.HttpProxyRequired
             |> Task.FromResult
+
+
+type FirewallHandler() =
+    static let instance = new FirewallHandler()
+
+    static member Instance() =
+        instance
+
+    interface IHandler with
+        member this.Run context =
+            match Configuration.Settings.Firewall.Enabled with
+            | false -> ExitReason.NewHostConnectionRequired
+            | true -> this.Check context
+            |> Task.FromResult
+
+    member private this.Check(context:SessionContext) =
+        match this.IsAllowed context with
+            | true -> ExitReason.NewHostConnectionRequired
+            | false -> ExitReason.TerminationRequired
+
+    member private this.IsAllowed(context:SessionContext) =
+        let a = Configuration.Settings.Firewall.Rules.Any(fun r -> r.Pattern.Match(context.Header.Host.Hostname).Success && r.Action = ActionEnum.Deny)
+        not a
