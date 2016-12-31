@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Handlers.fs" />
+    <Compile Include="Tunnels.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Proxy.Core\Proxy.Core.csproj">

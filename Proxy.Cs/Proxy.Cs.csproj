@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
@@ -49,6 +50,10 @@
     <ProjectReference Include="..\Proxy.Core\Proxy.Core.csproj">
       <Project>{8c7f69f1-3fa3-4e39-9c88-4a530981424f}</Project>
       <Name>Proxy.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proxy.Fs\Proxy.Fs.fsproj">
+      <Project>{26600861-81c3-498a-b798-f7783cf8b349}</Project>
+      <Name>Proxy.Fs</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

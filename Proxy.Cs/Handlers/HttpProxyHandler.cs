@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Proxy.Core.Handlers;
 using Proxy.Core.Headers;
 using Proxy.Core.Sessions;
-using Proxy.Cs.Tunnels;
+using Proxy.Fs.Tunnels;
 
 namespace Proxy.Cs.Handlers
 {
