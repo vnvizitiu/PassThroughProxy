@@ -8,10 +8,13 @@ open System.Threading
 type TcpTwoWayTunnel()=
 
     let rec tunnel (ctx:CancellationTokenSource) (source:Stream) (destination:Stream) (buffer:byte[]) = async {
-        let! bytes = source.AsyncRead(buffer)
-        if bytes > 0 && not ctx.IsCancellationRequested then
-            do! destination.AsyncWrite(buffer, 0, bytes)
-            return! tunnel ctx source destination buffer
+        try
+            let! bytes = source.AsyncRead(buffer)
+            if bytes > 0 && not ctx.IsCancellationRequested then
+                do! destination.AsyncWrite(buffer, 0, bytes)
+                return! tunnel ctx source destination buffer
+        with
+        | _ -> ()
     }
 
     member this._cancellationTokenSource = new CancellationTokenSource()
@@ -36,10 +39,13 @@ type TcpTwoWayTunnel()=
 type TcpOneWayTunnel()=
 
     let rec tunnel (ctx:CancellationTokenSource) (source:Stream) (destination:Stream) (buffer:byte[]) = async {
-        let! bytes = source.AsyncRead(buffer)
-        if bytes > 0 && not ctx.IsCancellationRequested then
-            do! destination.AsyncWrite(buffer, 0, bytes)
-            return! tunnel ctx source destination buffer
+        try
+            let! bytes = source.AsyncRead(buffer)
+            if bytes > 0 && not ctx.IsCancellationRequested then
+                do! destination.AsyncWrite(buffer, 0, bytes)
+                return! tunnel ctx source destination buffer
+        with
+        | _ -> ()
     }
 
     member this._cancellationTokenSource = new CancellationTokenSource()
